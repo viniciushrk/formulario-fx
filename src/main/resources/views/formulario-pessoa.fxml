@@ -1,158 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 
-<?import javafx.collections.FXCollections?>
 <?import br.sapiens.modelo.CursosEnum?>
 <?import br.sapiens.modelo.ProfissaoEnum?>
-<BorderPane prefHeight="380.0" prefWidth="724.0" style="-fx-min-width: 500px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.sapiens.controllers.CadastroPessoaController">
-         <center>
-            <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <VBox>
-                     <children>
-                        <AnchorPane minHeight="60.0">
-                           <children>
-                              <Label contentDisplay="RIGHT" text="Nome" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                           </children>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </AnchorPane>
-                        <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="60.0">
-                           <children>
-                              <Label text="Sobrenome" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="10.0" layoutY="70.0" minHeight="60.0">
-                           <children>
-                              <Label text="E-mail" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                           </children>
-                        </AnchorPane>
-                     </children>
-               <FlowPane.margin>
-                  <Insets left="40.0" />
-               </FlowPane.margin>
-                  </VBox>
-                  <VBox>
-                     <children>
-                        <AnchorPane minHeight="60.0">
-                           <children>
-                              <TextField fx:id="nome" />
-                           </children>
-                           <VBox.margin>
-                              <Insets left="20.0" />
-                           </VBox.margin>
-                        </AnchorPane>
-                        <AnchorPane layoutX="30.0" layoutY="10.0" minHeight="60.0">
-                           <children>
-                              <TextField fx:id="sobreNome" />
-                           </children>
-                           <VBox.margin>
-                              <Insets left="20.0" />
-                           </VBox.margin>
-                        </AnchorPane>
-                        <AnchorPane layoutX="30.0" layoutY="70.0" minHeight="60.0">
-                           <children>
-                              <TextField fx:id="email" />
-                           </children>
-                           <VBox.margin>
-                              <Insets left="20.0" />
-                           </VBox.margin>
-                        </AnchorPane>
-                     </children>
-                     <FlowPane.margin>
-                        <Insets left="10.0" right="40.0" top="20.0" />
-                     </FlowPane.margin>
-                  </VBox>
-            <VBox layoutX="10.0" layoutY="10.0">
-               <children>
-                  <AnchorPane minHeight="60.0">
-                     <children>
-                        <Label text="Prossissão" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="10.0" minHeight="60.0">
-                     <children>
-                        <Label text="Curso" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="70.0" minHeight="60.0">
-                     <children>
-                        <Label text="Tem bolsa?" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </VBox>
-            <VBox layoutX="87.0" layoutY="10.0">
-               <children>
-                  <AnchorPane minHeight="60.0">
-                     <VBox.margin>
-                        <Insets left="20.0" />
-                     </VBox.margin>
-                     <children>
-                        <ChoiceBox fx:id="profissao" prefWidth="150.0">
-                           <items>
-                              <FXCollections fx:factory="observableArrayList">
-                                 <ProfissaoEnum fx:value="Nenhum"/>
-                                 <ProfissaoEnum fx:value="Estudante"/>
-                                 <ProfissaoEnum fx:value="Advogado"/>
-                                 <ProfissaoEnum fx:value="Medico"/>
-                                 <ProfissaoEnum fx:value="Deputado"/>
-                                 <ProfissaoEnum fx:value="Tiktoker"/>
-                                 <ProfissaoEnum fx:value="Bonito"/>
-                              </FXCollections>
-                           </items>
-                        </ChoiceBox>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="30.0" layoutY="10.0" minHeight="60.0">
-                     <VBox.margin>
-                        <Insets left="20.0" />
-                     </VBox.margin>
-                     <children>
-                        <ChoiceBox fx:id="curso" prefWidth="150.0">
-                           <items>
-                              <FXCollections fx:factory="observableArrayList">
-                                 <CursosEnum fx:value="SISTEMAS"/>
-                                 <CursosEnum fx:value="MEDICINA"/>
-                                 <CursosEnum fx:value="DIREITO"/>
-                                 <CursosEnum fx:value="JAVASCRIPT"/>
-                                 <CursosEnum fx:value="HTML"/>
-                                 <CursosEnum fx:value="CSHARP"/>
-                                 <CursosEnum fx:value="CSS"/>
-                                 <CursosEnum fx:value="GAMES"/>
-                              </FXCollections>
-                           </items>
-                        </ChoiceBox>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="30.0" layoutY="70.0" minHeight="60.0">
-                     <VBox.margin>
-                        <Insets left="20.0" />
-                     </VBox.margin>
-                     <children>
-                        <CheckBox fx:id="bolsa" mnemonicParsing="false" text="É bolsista!" />
-                     </children>
-                  </AnchorPane>
-               </children>
-               <padding>
-                  <Insets top="20.0" />
-               </padding>
-            </VBox>
-               </children>
-            </FlowPane>
-         </center>
-   <bottom>
-      <AnchorPane nodeOrientation="RIGHT_TO_LEFT" BorderPane.alignment="CENTER">
+<?import javafx.collections.FXCollections?>
+<BorderPane fx:controller="br.sapiens.controllers.CadastroPessoaController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#salvar" style="-fx-background-color: green;" text="submit" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+            <AnchorPane prefHeight="286.0" prefWidth="122.0">
+               <children>
+                  <Label layoutX="23.0" layoutY="36.0" prefHeight="19.0" prefWidth="45.0" text="Nome" />
+                  <Label layoutX="23.0" layoutY="89.0" prefHeight="20.0" prefWidth="74.0" text="Sobrenome" />
+                  <Label layoutX="23.0" layoutY="150.0" text="E-mail" />
+                  <Label layoutX="23.0" layoutY="202.0" text="Profissão" />
+                  <Label layoutX="25.0" layoutY="263.0" text="Curso" />
+                  <Button onAction="#salvar" layoutX="21.0" layoutY="313.0" mnemonicParsing="false" text="Salvar" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="352.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="nome" layoutX="14.0" layoutY="37.0" />
+                  <TextField fx:id="email" layoutX="14.0" layoutY="143.0" />
+                  <TextField fx:id="sobreNome" layoutX="14.0" layoutY="94.0" />
+                  <ChoiceBox fx:id="profissao" layoutX="14.0" layoutY="199.0" prefWidth="150.0">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <ProfissaoEnum fx:value="Nenhum"/>
+                           <ProfissaoEnum fx:value="Dev"/>
+                           <ProfissaoEnum fx:value="Backend"/>
+                           <ProfissaoEnum fx:value="Qa"/>
+                           <ProfissaoEnum fx:value="PO"/>
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+                  <CheckBox fx:id="bolsa" layoutX="14.0" layoutY="305.0" mnemonicParsing="false" text="Possui bolsa" />
+                  <ChoiceBox fx:id="curso" layoutX="14.0" layoutY="255.0" prefWidth="150.0" >
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <CursosEnum fx:value="SISTEMAS"/>
+                           <CursosEnum fx:value="JAVASCRIPT"/>
+                           <CursosEnum fx:value="CSHARP"/>
+
+                        </FXCollections>
+                     </items>
+                  </ChoiceBox>
+               </children>
+            </AnchorPane>
          </children>
-      </AnchorPane>
-   </bottom>
+      </FlowPane>
+   </center>
 </BorderPane>

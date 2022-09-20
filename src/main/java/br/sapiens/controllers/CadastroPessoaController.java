@@ -28,15 +28,9 @@ public class CadastroPessoaController {
 
 
     public void salvar() {
-        boolean bolsista = false;
-        if(bolsa.isSelected()){
-            bolsista = true;
-        } else {
-            bolsista = false;
-        }
-        Pessoa pessoa = null;
         try {
-            pessoa = new Pessoa(
+            boolean bolsista = bolsa.isSelected();
+            Pessoa pessoa = new Pessoa(
                     nome.getText(),
                     sobreNome.getText(),
                     email.getText(),
@@ -45,7 +39,7 @@ public class CadastroPessoaController {
                     bolsista
             );
             String msg = "Cadastrado com sucesso! ";
-            var alerta = new Alert(Alert.AlertType.ERROR,msg);
+            var alerta = new Alert(Alert.AlertType.CONFIRMATION,msg);
             alerta.setTitle("Cadatrado");
             alerta.show();
         } catch (MeuException e) {

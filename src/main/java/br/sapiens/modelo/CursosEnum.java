@@ -2,7 +2,9 @@ package br.sapiens.modelo;
 
 public enum CursosEnum {
 
-    MEDICINA("Medicina"), SISTEMAS("Sistemas da Informação"), DIREITO("Direito"), JAVASCRIPT("JavaScript"), CSHARP("C#"), HTML("HTML"), CSS("CSS"), GAMES("Jogos Digitais");
+    SISTEMAS("Sistemas da Informação"),
+    JAVASCRIPT("JavaScript"),
+    CSHARP ("C# \uD83D\uDE0F");
 
     CursosEnum(String nome) {
     }
